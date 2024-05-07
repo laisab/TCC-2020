@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<HTML LANG="PT-BR">
+	<head>
+		<title> Produtos - Malu Dolce </title>
+        <META CHARSET="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Shortcut icon" href="../imagens/saco-de-confeitar.png">
+                <link href="stylepro.css" type="text/css" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>    
+	<body>
+
+
+<!-- logo, menu, imagem, titulo e botão  -->
+    <div class="fundo">
+        <div class="conteiner-1">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../imagens/logo_atelie.png" widht="90px" height="90px">
+                </div>
+                <nav>
+                    <UL id="menuitens">
+                        <LI><a href="../index.html">Início</a></LI>
+                        <LI><a href="produtos.html">Produtos</a></LI>
+                        <LI><a href="../sobre/sobre.html">Sobre</a></LI>
+                        <LI><a href="../contato/contato.html">Contato</a></LI>
+                                              
+                    </UL>
+                </nav>
+                
+                <img src="../imagens/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+    </div>
+    
+
+
+    
+        
+
+<!-- Inicio conteudo -->
+<div class="conteudo">
+    <div class="conteiner"> 
+        <h2>Lista de Produtos:</h2>
+        <ul>
+            <li><a href="bolos.html"><p>Bolos Recheados e Simples</p></a></li>
+            <li><a href="personalizados.html"><p>Bolos Personalizados</p></a></li>
+            <li><a href="doces.html"><p>Doces</p></a></li>
+            <li><a href="presentes.html"><p>Presentes</p></a></li>
+        </ul>   
+    </div>
+</div>
+</div>
+<!-- fim conteudo -->           
+
+
+<!-- Inicio rodapé -->
+
+<div class="rodape">
+    <p class="cop"> © Todos os direitos reservados. </p>
+</div>
+
+<!-- FIM rodape -->
+
+        <script>
+            var menuitens = document.getElementById("menuitens");
+            menuitens.style.maxHeight = "0px";
+
+            function menutoggle(){
+                if(menuitens.style.maxHeight == "0px"){
+                    menuitens.style.maxHeight = "200px";
+                }else{menuitens.style.maxHeight = "0px";}
+            }
+
+        </script>
+
+
+
+    </body>    
+</html>

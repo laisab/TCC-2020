@@ -1,0 +1,142 @@
+CREATE DATABASE atelie;
+Use atelie;
+
+CREATE TABLE cliente(
+cli_cod int auto_increment  NOT NULL,
+cli_nome varchar(255) NOT NULL,
+cli_tel varchar(14) NOT NULL,
+cli_email varchar(100),
+cli_cpf varchar(11) NOT NULL,
+cli_sexo char (1) NOT NULL,
+cli_rua varchar(20) NOT NULL,
+cli_num varchar(4) NOT NULL,
+cli_compl varchar(20),
+cli_bairro varchar(50) NOT NULL,
+cli_cidade varchar(50) NOT NULL,
+cli_cep varchar(10) NOT NULL,
+PRIMARY KEY (cli_cod)) ENGINE=InnoDB charset=utf8;
+
+CREATE TABLE encomenda(
+enco_cod int auto_increment  NOT NULL,
+enco_prod varchar(255) NOT NULL,
+enco_qtde integer NOT NULL,
+enco_tamanho float NOT NULL,
+enco_valor float NOT NULL,
+enco_forma_pgt varchar(30) NOT NULL,
+enco_data_entrega date NOT NULL,
+cli_cod int NOT NULL,
+PRIMARY KEY (enco_cod),
+FOREIGN KEY (cli_cod) references cliente (cli_cod) on delete cascade on update cascade) ENGINE=InnoDB charset=utf8;
+
+CREATE TABLE estoque(
+esto_cod_produto integer auto_increment  NOT NULL,
+esto_ingrediente varchar(255),
+esto_embalagem varchar(255),
+esto_qtd_ingrediente integer,
+esto_qtd_embalagem integer,
+PRIMARY KEY (esto_cod_produto)) ENGINE=InnoDB charset=utf8;
+
+CREATE TABLE caixa(
+cai_cod_pgt int auto_increment NOT NULL,
+cai_pgt float NOT NULL,
+cai_prod_pgt varchar(255) NOT NULL,
+cai_nome_cli varchar(255) NOT NULL,
+cai_data_pgt date NOT NULL,
+PRIMARY KEY (cai_cod_pgt)) ENGINE=InnoDB charset=utf8;
+
+CREATE TABLE historico_encomenda(
+hist_enco_cod int auto_increment  NOT NULL,
+hist_enco_prod varchar(255) NOT NULL,
+hist_enco_qtde integer NOT NULL,
+hist_enco_tamanho float NOT NULL,
+hist_enco_valor float NOT NULL,
+hist_enco_forma_pgt varchar(30) NOT NULL,
+hist_data_entrega date NOT NULL,
+PRIMARY KEY (hist_enco_cod)) ENGINE=InnoDB charset=utf8;
+
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Açúcar confeiteiro (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Açúcar cristal (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Açúcar gelado (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Açúcar mascavo (g)', 5000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Açúcar refinado (g)', 20000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Amendoim triturado (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Amido de milho (g)', 5000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Aveia em flocos finos (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Bicarbonato de sódio (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Biscoito Oreo (g)', 180);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Cacau em pó 100% (g)', 20000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Canela em pó 100% (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Canudinho de waffer (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Casquinha de waffer - cone (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chantilly (mL)', 14000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate ao leite em barra (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate branco em barra (g)', 4000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate fracionado branco (g)', 2000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate fracionado meio amargo (g)', 4000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate Kit Kat (g)', 830);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Chocolate meio amargo em barra (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Coco ralado queimado (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Coco ralado seco (g)', 5000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Conhaque Dreher (mL)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel amarelo (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel azul (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel laranja (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel lilás (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel preto (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel rosa (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel verde (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante em gel vermelho (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate amarelo (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate azul (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate preto (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate rosa (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate verde (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Corante para chocolate vermelho (g)', 15);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Cravo em pó (g)', 300);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Creme de avelã - Nutella (g)', 650);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Creme de leite (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Doce de leite (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Emulsificante (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de banana (mL)', 30);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de baunilha (mL)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de laranja (mL)', 30);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de limão (mL)', 30);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de mel (mL)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Essência de rum (mL)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Farinha de amendoim (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Farinha de trigo (g)', 15000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Fermento químico em pó (g)', 2000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Flocos de coco (g)', 5000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Fubá mimoso (g)', 1000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Gelatina incolor (g)', 300);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Granulado chocolate (g)', 5000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Granulado colorido (g)', 2000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Leite condensado (g)', 43000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Leite em pó (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Leite integral (mL)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Manteiga (g)', 500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Mel (mL)', 2000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Milho de pipoca (g)', 1500);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Noz moscada em pó (g)', 300);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Óleo de soja (mL)', 2000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Ovos (g)', 10000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Paçoca de rolha (g)', 800);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Pasta americana branca (g)', 3000);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Pó brilhante para decoração dourado (g)', 20);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Pó brilhante para decoração perolado (g)', 20);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Pó brilhante para decoração rose gold (g)', 20);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Pó brilhante para decoração vermelho (g)', 20);
+insert into estoque(esto_cod_produto, esto_ingrediente, esto_qtd_ingrediente) values (default, 'Sal (g)', 1000);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Bandeja de isopor', 100);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Caixa de papelão viagem 100 unidades', 50);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Caixa de papelão viagem 50 unidades', 25);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Embalagem de acetato para bolo 35MA', 10);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Embalagem de acetato para bolo 50MA', 100);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Embalagem de acetato para bolo 50MB', 50);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Fôrma de docinho quatro pétalas branca', 5000);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Fôrminha de papel N°5 para docinhos', 500);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Fundo renda para doce', 1000);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Placa de isopor para bolo 15 cm', 25);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Placa de isopor para bolo 25 cm', 25);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Placa de isopor para bolo 35 cm', 25);
+insert into estoque(esto_cod_produto, esto_embalagem, esto_qtd_embalagem) values (default, 'Vela mágica', 50);

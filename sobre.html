@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<HTML LANG="PT-BR">
+	<head>
+		<title> Sobre - Malu Dolce </title>
+        <META CHARSET="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Shortcut icon" href="../imagens/saco-de-confeitar.png">
+                <link href="style-so.css" type="text/css" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>    
+	<body>
+
+
+<!-- logo, menu, imagem, titulo e botão  -->
+    
+        <div class="conteiner-1">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../imagens/logo_atelie.png" widht="90px" height="90px">
+                </div>
+                <nav>
+                    <UL id="menuitens">
+                        <LI><a href="../index.html">Início</a></LI>
+                        <LI><a href="../Produtos/produtos.html">Produtos</a></LI>
+                        <LI><a href="sobre.html">Sobre</a></LI>
+                        <LI><a href="../contato/contato.html">Contato</a></LI>
+                                              
+                    </UL>
+                </nav>
+                
+                <img src="../imagens/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+    </div>
+    
+    
+        
+
+<!-- Confeitaria -->
+<section id="one" class="wrapper">
+    <div class="inner">
+    <div class="grid-style">
+        <div>
+        <div class="box">
+            <div class="image fit">
+            
+            </div>
+            <br><br>
+            <div class="content">
+                <header class="align-center">
+            <h2>Malu Doces</h2>
+              <p> Confeitaria </p>
+                </header>
+                <p>Ma & Lu. Mãe e filha.</p>
+                <p>Confeitaria artesanal e afetiva.🥰 </p>
+                <p>Bolos, chocolates, docinhos, salgados.</p>
+                <p>Somente encomendas. SP </p>
+            </div> 
+        </div>
+        </div>
+        
+ <!-- Grupo -->
+    <div>
+    <div class="box">
+        <div class="image fit">
+        
+        </div>
+        <br><br>
+
+            <div class="content">
+                <header class="align-center">
+            <h2> Desenvolvedores </h2>	
+            <p> Grupo de TCC Etec Jardim Ângela</p>	
+                </header>
+                <p> Nesse site tivemos como objetivo fazer uma boa demonstração das habilidades de nosso cliente com doces sendo um site puramente visual e demonstrativo. Grupo de TCC formado por: Lais Aparecida, Daniella Rocha, Guilherme Selis Barros, Helena Cordeiro e Nathan Custodio.</p>		
+            </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section> 
+
+
+<!-- Inicio rodapé -->
+
+<div class="rodape">
+    <p class="cop"> © Todos os direitos reservados. </p>
+</div>
+
+<!-- FIM rodape -->
+
+        <script>
+            var menuitens = document.getElementById("menuitens");
+            menuitens.style.maxHeight = "0px";
+
+            function menutoggle(){
+                if(menuitens.style.maxHeight == "0px"){
+                    menuitens.style.maxHeight = "200px";
+                }else{menuitens.style.maxHeight = "0px";}
+            }
+
+        </script>
+
+
+
+    </body>    
+</html>

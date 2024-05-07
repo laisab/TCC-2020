@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<HTML LANG="PT-BR">
+	<head>
+		<title> Contato - Malu Dolce </title>
+        <META CHARSET="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Shortcut icon" href="../imagens/saco-de-confeitar.png">
+                <link href="../sobre/style-so.css" type="text/css" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>    
+	<body>
+
+
+<!-- logo, menu, imagem, titulo e botão  -->
+    
+        <div class="conteiner-1">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../imagens/logo_atelie.png" widht="90px" height="90px">
+                </div>
+                <nav>
+                    <UL id="menuitens">
+                        <LI><a href="../index.html">Início</a></LI>
+                        <LI><a href="../Produtos/produtos.html">Produtos</a></LI>
+                        <LI><a href="../sobre/sobre.html">Sobre</a></LI>
+                        <LI><a href="../contato/contato.html">Contato</a></LI>
+                                              
+                    </UL>
+                </nav>
+                
+                <img src="../imagens/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+    </div>
+    
+    
+        
+
+<!-- Confeitaria -->
+<section id="one" class="wrapper">
+    <div class="inner">
+    
+        <div>
+        <div class="box">
+            <div class="image fit">
+            
+            </div>
+            <br><br>
+            <div class="content">
+                <header class="align-center">
+            <h2>Nós da Malu Dolce </h2>
+              
+                </header>
+                <p> não usamos muitas redes socias, mas você ainda pode nos achar no Instagram ou ate mesmo por WhatsApp, pelos links:</p>
+                <br>
+                <p> <a href="https://www.instagram.com/maludoceesalgado/?hl=pt-br"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram: Malu Doces</a></p>
+                <br>
+                <p> <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp:  +55 11 98515-7910 </i></p>
+                <p> <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp:  +55 11 98285-2496 </i></p>
+            </div> 
+        </div>
+        </div>
+        
+ <!-- Grupo -->
+    
+    </div>
+
+    </section> 
+
+
+<!-- Inicio rodapé -->
+
+<div class="rodape">
+    <p class="cop"> © Todos os direitos reservados. </p>
+</div>
+
+<!-- FIM rodape -->
+
+        <script>
+            var menuitens = document.getElementById("menuitens");
+            menuitens.style.maxHeight = "0px";
+
+            function menutoggle(){
+                if(menuitens.style.maxHeight == "0px"){
+                    menuitens.style.maxHeight = "200px";
+                }else{menuitens.style.maxHeight = "0px";}
+            }
+
+        </script>
+
+
+
+    </body>    
+</html>
