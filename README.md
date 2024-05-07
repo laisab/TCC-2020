@@ -2,7 +2,7 @@
 
 Projeto de TCC em grupo realizado em 2020.
 <br>**Orientador**: Laelson Mota Silva</br>
-<br>**Instituição**: ETEC Jardim Ângela</br>
+**Instituição**: ETEC Jardim Ângela</br>
 
 ## Proposta do Projeto
 
